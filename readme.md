@@ -154,7 +154,7 @@ This tool was developed around two years ago to eliminate the time wasted in the
 ## Installation
 
 ```bash
-git clone 
+git clone https://github.com/0xhav0c/FastVulnVerify.git
 pip install -r requirements.txt
 python3 fast-vuln-verify.py
 ```
