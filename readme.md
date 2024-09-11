@@ -169,3 +169,5 @@ Community members can also contribute to this project by developing new modules,
 
 My aim is to turn this tool into a more comprehensive and capable cybersecurity solution, where everyone can contribute. With your contributions, we can expand the modular structure of the script to create a more powerful and effective vulnerability verification tool.
 
+## Notes
+The exploit and nmap scripts used in the script were obtained from public repos long ago. If the owners write, I can add them here as a thank you ^^
