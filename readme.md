@@ -70,7 +70,6 @@ This tool was developed around two years ago to eliminate the time wasted in the
 - Microsoft Windows SMBv1 Multiple Vulnerabilities
 - SAP MaxDB Multiple Vulnerabilities
 - Transport Layer Security (TLS) Protocol CRIME Vulnerability
-- HP iLO 4 <= 2.52 RCE
 - iLO 3 / iLO 4 Denial of Service Vulnerability
 - X11 Server Unauthenticated Access
 - Oracle GlassFish Server Multiple Vulnerabilities
@@ -111,13 +110,12 @@ This tool was developed around two years ago to eliminate the time wasted in the
 - Microsoft ASP.NET Application Tracing trace.axd Information Disclosure
 - Oracle WebLogic WLS9-async Remote Code Execution (remote check)
 - VMware vCenter Server 6.5 / 6.7 / 7.0 Multiple Vulnerabilities (VMSA-2021-0010)
-- F5 BIG-IP RCE (CVE-2021-22986
+- F5 BIG-IP RCE (CVE-2021-22986)
 - Multiple Server Crafted Request WEB-INF Directory Information Disclosure
 - SMB Use Host SID to Enumerate Local Users Without Credentials
 - DNS Server Recursive Query Cache Poisoning Weakness
 - Apache Cassandra Information Disclosure Vulnerability
 - MongoDB Service Without Authentication Detection
-- Oracle WebLogic Server vulnerability scanner
 - Tenable Multiple Vulnerabilities
 - Samba Badlock Vulnerability
 - Elasticsearch ESA-2018-10
