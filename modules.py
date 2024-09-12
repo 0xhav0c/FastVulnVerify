@@ -235,396 +235,384 @@ modules = [
     },
     {
         "ID": 40,
-        "Title": "HP iLO 4 <= 2.52 RCE",
-        "Description": "Check the HP iLO 4 <= 2.52 RCE Vulnerability.",
-        "os_code": "python3 ./custom-scanners/ilo4scanner.py -ip {RHOST}"
-    },
-    {
-        "ID": 41,
         "Title": "iLO 3 / iLO 4  Denial of Service Vulnerability",
         "Description": "Detect the iLO Denial of Service Vulnerability with nmap",
         "os_code": "nmap -p{RPORT} -sV --script http-hp-ilo-info.nse {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 42,
+        "ID": 41,
         "Title": "X11 Server Unauthenticated Access",
         "Description": "Detect the X11 Server Unauthenticated Access with nmap",
         "os_code": "nmap -p{RPORT} -sV {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered' -e 'closed'"
     },
     {
-        "ID": 43,
+        "ID": 42,
         "Title": "Oracle GlassFish Server Multiple Vulnerabilities",
         "Description": "Detect the Oracle GlassFish Server Multiple Vulnerabilities with nmap",
         "os_code": "nmap -p{RPORT} -sV {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 44,
+        "ID": 43,
         "Title": "Microsoft SQL Server Unsupported Version Detection",
         "Description": "Detect the Unsupported Microsoft SQL Server with nmap",
         "os_code": "nmap -p{RPORT} -sV {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 45,
+        "ID": 44,
         "Title": "OpenSSL Heartbeat Information Disclosure (Heartbleed)",
         "Description": "Detect the Heartbleed Vulnerability with testssl",
         "os_code": "testssl -H {RHOST}:{RPORT} | grep -E 'Start.*|Testing.*|Heartbleed.*|Done.*' | awk '{print $0 \"\\n\"}'"
     },
     {
-        "ID": 46,
+        "ID": 45,
         "Title": "Jetty < 4.2.19 HTTP Server HttpRequest.java Content-Length Handling Remote Overflow DoS",
         "Description": "Detect the Jetty Remote Overflow DoS Vulnerability with nmap",
         "os_code": "nmap -p{RPORT} -sV {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 47,
+        "ID": 46,
         "Title": "Kibana ESA-2018-17",
         "Description": "Detect the Kibana ESA-2018-17 Vulnerability with nmap",
         "os_code": "nmap -p{RPORT} -sV {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 48,
+        "ID": 47,
         "Title": "SSL DROWN Attack Vulnerability (Decrypting RSA with Obsolete and Weakened eNcryption)",
         "Description": "Detect the SSL DROWN Attack Vulnerability with testssl",
         "os_code": "testssl -D {RHOST}:{RPORT} | grep -E 'Start.*|Testing.*|Heartbleed.*|Done.*' | awk '{print $0 \"\\n\"}'"
     },
     {
-        "ID": 49,
+        "ID": 48,
         "Title": "OpenSSL AES-NI Padding Oracle MitM Information Disclosure",
         "Description": "Detect the OpenSSL AES-NI MitM Information Disclosure Vulnerability with testssl",
         "os_code": "testssl -s {RHOST}:{RPORT} | grep -E 'Start.*|Testing.*|NULL.*|Anonymous.*|Export.*|LOW.*|Triple.*|Obsolete.*|Strong.*|Done.*' | awk '{print $0 \"\\n\"}'"
     },
     {
-        "ID": 50,
+        "ID": 49,
         "Title": "SSL/TLS Diffie-Hellman Modulus <= 1024 Bits (Logjam)",
         "Description": "Detect the Logjam Vulnerability with testssl",
         "os_code": "testssl -J {RHOST}:{RPORT} | grep -E 'Start.*|Testing.*|LOGJAM.*|Done.*' | awk '{print $0 \"\\n\"}'"
     },
     {
-        "ID": 51,
+        "ID": 50,
         "Title": "SSL Null Cipher Suites Supported",
         "Description": "Detect the SSL Null Cipher Suites Supported with testssl",
         "os_code": "testssl -s {RHOST}:{RPORT} | grep -E 'Start.*|Testing.*|NULL.*|Anonymous.*|Export.*|LOW.*|Triple.*|Obsolete.*|Strong.*|Done.*' | awk '{print $0 \"\\n\"}'"
     },
     {
-        "ID": 52,
+        "ID": 51,
         "Title": "SSH Protocol Version 1 Session Key Retrieval",
         "Description": "Detect the SSH Protocol Version 1 Session Key Retrieval Vulnerability with nmap",
         "os_code": "nmap -p{RPORT} -sV --script ssh-hostkey --script-args ssh_hostkey=full {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 53,
+        "ID": 52,
         "Title": "Cisco CallManager TFTP File Detection",
         "Description": "Detect the SSH Protocol Version 1 Session Key Retrieval Vulnerability with nmap",
         "os_code": "nmap -p{RPORT} -sV --script tftp-enum.nse {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 54,
+        "ID": 53,
         "Title": "Internet Key Exchange (IKE) Aggressive Mode with Pre-Shared Key",
         "Description": "Detect the IKE Aggressive Mode with Pre-Shared Key Vulnerability with ike-scan",
         "os_code": "ike-scan {RHOST} -M -A"
     },
     {
-        "ID": 55,
+        "ID": 54,
         "Title": "Netatalk OpenSession Remote Code Execution",
         "Description": "Detect the Netatalk OpenSession Remote Code Execution Vulnerability",
         "os_code": "python3 ./exploits/CVE-2018-1160.py -i {RHOST} -lv"
     },
     {
-        "ID": 56,
+        "ID": 55,
         "Title": "MS09-001: Microsoft Windows SMB Vulnerabilities Remote Code Execution",
         "Description": "Detect MS09-001 Vulnerability with Metasploit Framework",
         "os_code": "msfconsole -q -x 'use auxiliary/dos/windows/smb/ms09_001_write;set rhosts {RHOST};run;exit'"
     },
     {
-        "ID": 57,
+        "ID": 56,
         "Title": "Conficker Worm Detection",
         "Description": "Detect the Conficker Worm Detection Vulnerability with nmap",
         "os_code": "nmap -p{RPORT} -sV --script smb-vuln-conficker.nse {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 58,
+        "ID": 57,
         "Title": "Oracle WebLogic Server RCE",
         "Description": "Detect the Oracle WebLogic Server RCE Vulnerability with nmap",
         "os_code": "nmap -p{RPORT} -sV {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 59,
+        "ID": 58,
         "Title": "Microsoft Windows SMB Shares Unprivileged Access",
         "Description": "Detect the Microsoft Windows SMB Shares Unprivileged Access",
         "os_code": "crackmapexec smb {RHOST} -u '' -p '' --shares"
     },
     {
-        "ID": 60,
+        "ID": 59,
         "Title": "Microsoft Windows SMB Shares Unprivileged Access (2)",
         "Description": "Detect the Microsoft Windows SMB Shares Unprivileged Access",
         "os_code": "smbmap -H {RHOST} && smbmap -H {RHOST} -R"
     },
     {
-        "ID": 61,
+        "ID": 60,
         "Title": "Microsoft Exchange Server proxylogon (CVE-2021-26855)",
         "Description": "Detect the SSH Protocol Authentication Bypass Vulnerability",
         "os_code": "nmap -p{RPORT} -sV --script ./nmap-scripts/CVE-2021-26855.nse {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 62,
+        "ID": 61,
         "Title": "Network Time Protocol Daemon (ntpd) monlist Command Enabled DoS",
         "Description": "Detect the Network Time Protocol Daemon (ntpd) monlist Command Enabled DoS Vulnerability",
         "os_code": "python3 ./exploits/CVE-2013-5211.py {RHOST}"
     },
     {
-        "ID": 63,
+        "ID": 62,
         "Title": "Web Server HTTP Header Internal IP Disclosure",
         "Description": "Detect the Web Server HTTP Header Internal IP Disclosure Vulnerability",
         "os_code": " echo Target IP Address is : {RHOST} && python3 ./exploits/CVE-2000-0649.py {RHOST} {RPORT}"
     },
     {
-        "ID": 64,
+        "ID": 63,
         "Title": "Unsupported Web Server",
         "Description": "Detect the Unsupported Web Servers with nmap",
         "os_code": "nmap -p{RPORT} -sV {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 65,
+        "ID": 64,
         "Title": "SNMP Request Cisco Router Information Disclosure",
         "Description": "Detect the SNMP Request Cisco Router Information Disclosure with nmap",
         "os_code": "sudo nmap -sU -p{RPORT} -sV --script snmp-sysdescr {RHOST} | grep -v -e 'Host*' for -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 66,
+        "ID": 65,
         "Title": "iSCSI Unauthenticated Target Detection",
         "Description": "Detect the iSCSI Unauthenticated Target Vulnerability",
         "os_code": "iscsiadm -m discovery -t st -p {RHOST}:{RPORT}"
     },
     {
-        "ID": 67,
+        "ID": 66,
         "Title": "Microsoft Exchange Client Access Server Information Disclosure",
         "Description": "Detect the Microsoft Exchange Client Access Server Information Disclosure",
         "os_code": "openssl s_client -host {RHOST} -port {RPORT} && GET /autodiscover/autodiscover.xml HTTP/1.0 && GET / HTTP/1.0"
     },
     {
-        "ID": 68,
+        "ID": 67,
         "Title": "Microsoft Exchange Server Proxyshell (CVE-2021-34473)",
         "Description": "Detect the VxWorks WDB Debug Service Detection",
         "os_code": "nmap -p{RPORT} -sV --script ./nmap-scripts/CVE-2021-34473.nse {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 69,
+        "ID": 68,
         "Title": "SuperMicro IPMI PSBlock File Plaintext Password Disclosure",
         "Description": "Detect the SNMP Request Cisco Router Information Disclosure with nmap",
         "os_code": "nmap -p{RPORT} --script supermicro-ipmi-conf {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 70,
+        "ID": 69,
         "Title": "X Display Manager Control Protocol (XDMCP) Detection",
         "Description": "Detect the X Display Manager Control Protocol (XDMCP) Detection with nmap",
         "os_code": "sudo nmap -sU -p{RPORT} --script xdmcp-discover {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 71,
+        "ID": 70,
         "Title": "iLO 4 < 2.53 Remote Code Execution Vulnerability (CVE-2017-12542)",
         "Description": "Detect the iLO 4 < 2.53 Remote Code Execution Vulnerability",
         "os_code": "python3 ./exploits/CVE-2017-12542.py -t {RHOST} && python3 ./exploits/CVE-2017-12542.py -e -u admin -p password {RHOST} && echo 'Credentials => admin/password has been created'"
     },
     {
-        "ID": 72,
+        "ID": 71,
         "Title": "F5 BIG-IP Cookie Remote Information Disclosure",
         "Description": "Detect F5 BIG-IP Cookie Remote Information Disclosure with Metasploit Framework",
         "os_code": "msfconsole -q -x 'use auxiliary/gather/f5_bigip_cookie_disclosure;set rhosts {RHOST};set rport {RPORT};run;exit'"
     },
     {
-        "ID": 73,
+        "ID": 72,
         "Title": "Atlassian Confluence Server Webwork OGNL Injection (CVE-2021-26084)",
         "Description": "Detect the Atlassian Confluence Server Webwork OGNL Injection (CVE-2021-26084)",
         "os_code": "python3 ./exploits/CVE-2021-26084.py -u https://{RHOST} && python3 ./exploits/CVE-2021-26084.py -u https://{RHOST} -e whoami && python3 ./exploits/CVE-2021-26084.py -u https://{RHOST} -e 'cat /etc/passwd'"
     },
     {
-        "ID": 74,
+        "ID": 73,
         "Title": "Web Server PROPFIND Method Internal IP Disclosure",
         "Description": "Detect the Web Server PROPFIND Method Internal IP Disclosure with Metasploit Framework",
         "os_code": "msfconsole -q -x 'use auxiliary/scanner/http/webdav_internal_ip;set rhosts {RHOST};set rport {RPORT};run;exit'"
     },
     {
-        "ID": 75,
+        "ID": 74,
         "Title": "SSH Known Hard Coded Private Keys",
         "Description": "Detect the SSH Known Hard Coded Private Keys Vulnerability with nmap",
         "os_code": "nmap -p{RPORT} -sV -sC {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 76,
+        "ID": 75,
         "Title": "SSL / TLS Certificate Known Hard Coded Private Keys",
         "Description": "Detect the SSL/TLS Known Hard Coded Private Keys Vulnerability with nmap",
         "os_code": "nmap -p{RPORT} -sV --script ssl-known-key {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 77,
+        "ID": 76,
         "Title": "Atlassian Confluence Server Webwork OGNL Injection (CVE-2021-26084)",
         "Description": "Detect the Atlassian Confluence Server Webwork OGNL Injection (CVE-2021-26084)",
         "os_code": "curl -L http://{RHOST}:{RPORT}/apex/f\?p\=4600:6:1982718168701680::::: | grep 'Application Express 4'"
     },
     {
-        "ID": 78,
+        "ID": 77,
         "Title": "Microsoft ASP.NET Application Tracing trace.axd Information Disclosure",
         "Description": "Detect the ASP.NET Tracing trace.axd Information Disclosure with Metasploit Framework",
         "os_code": "msfconsole -q -x 'use auxiliary/scanner/http/trace_axd;set rhosts {RHOST};set rport {RPORT};run;exit'"
     },
     {
-        "ID": 79,
+        "ID": 78,
         "Title": "Oracle WebLogic WLS9-async Remote Code Execution (remote check)",
         "Description": "Detect the Oracle WebLogic WLS9-async Remote Code Execution (CVE-2019-2725)",
         "os_code": "python3 ./exploits/CVE-2019-2725.py -u http://{RHOST}:{RPORT}"
     },
     {
-        "ID": 80,
+        "ID": 79,
         "Title": "VMware vCenter Server 6.5 / 6.7 / 7.0 Multiple Vulnerabilities (VMSA-2021-0010)",
         "Description": "Detect the VMware vCenter Server VMSA-2021-0010 Vulnerability  with nmap",
         "os_code": "nmap -p{RPORT} -sV --script ./nmap-scripts/CVE-2021-21985.nse {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 81,
+        "ID": 80,
         "Title": "F5 BIG-IP RCE (CVE-2021-22986)",
         "Description": "Exploit the F5 BIG-IP RCE (CVE-2021-22986)",
         "os_code": "python3 ./exploits/CVE-2021-22986.py -a true -u https://{RHOST} -c 'cat /etc/os-release && id'"
     },
     {
-        "ID": 82,
+        "ID": 81,
         "Title": "Multiple Server Crafted Request WEB-INF Directory Information Disclosure",
         "Description": "Detect the WEB-INF Directory Information Disclosure with curl",
         "os_code": "curl https://{RHOST}:{RPORT}/WEB-INF./web.xml"
     },
     {
-        "ID": 83,
+        "ID": 82,
         "Title": "SMB Use Host SID to Enumerate Local Users Without Credentials",
         "Description": "Detect the SMB Use Host SID to Enumerate Local Users Without Credentials with Metasploit Framework",
         "os_code": "msfconsole -q -x 'use auxiliary/scanner/smb/smb_lookupsid;set rhosts {RHOST};set rport {RPORT};run;exit'"
     },
     {
-        "ID": 84,
+        "ID": 83,
         "Title": "DNS Server Recursive Query Cache Poisoning Weakness",
         "Description": "Detect the DNS Server Recursive Query Cache Poisoning Vulnerability with nmap",
         "os_code": "sudo nmap -Pn -sU -p{RPORT} --script=dns-recursion {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 85,
+        "ID": 84,
         "Title": "Apache Cassandra  Information Disclosure Vulnerability",
         "Description": "Detect the Apache Cassandra  Information Disclosure Vulnerability",
         "os_code": "cqlsh {RHOST} && echo 'You can run 'desc system_auth' and 'SELECT * from system_auth.roles;' '"
     },
     {
-        "ID": 86,
+        "ID": 85,
         "Title": "MongoDB Service Without Authentication Detection",
         "Description": "Detect the MongoDB Service Without Authentication Detection with Metasploit Framework",
         "os_code": "msfconsole -q -x 'use auxiliary/scanner/mongodb/mongodb_login;set rhosts {RHOST};set rport {RPORT};run;exit'"
     },
     {
-        "ID": 87,
-        "Title": "Oracle WebLogic Server vulnerability scanner",
-        "Description": "Scan the Oracle WebLogic Server Vulnerability scanner",
-        "os_code": "python3 ./custom-scanners/WeblogicScan/WeblogicScan.py -u {RHOST} -p {RPORT}"
-    },
-    {
-        "ID": 88,
+        "ID": 86,
         "Title": "Tenable Multiple Vulnerabilities",
         "Description": "Scan the Tenable Multiple Vulnerabilities ",
         "os_code": "curl -k https://{RHOST}:{RPORT}/server/properties"
     },
     {
-        "ID": 89,
+        "ID": 87,
         "Title": "Samba Badlock Vulnerability",
         "Description": "Detect the Samba Badlock Vulnerability with nmap",
         "os_code": "nmap -p{RPORT} --script=smb-os-discovery {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 90,
+        "ID": 88,
         "Title": "Elasticsearch ESA-2018-10",
         "Description": "Scan the Tenable Multiple Vulnerabilities ",
         "os_code": "curl -k http://{RHOST}:{RPORT}/_cat/indices?v"
     },
     {
-        "ID": 91,
+        "ID": 89,
         "Title": "QNAP QTS / QuTS Hero Multiple Vulnerabilities",
         "Description": "Detect the QNAP QTS / QuTS Hero Multiple Vulnerabilities with nmap",
         "os_code": "nmap -p{RPORT} --script http-qnap-nas-info {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 92,
+        "ID": 90,
         "Title": "PostgreSQL Default Unpassworded Account",
         "Description": "Scan the PostgreSQL Default Unpassworded Account",
         "os_code": "psql -h {RHOST} -p {RPORT} -U postgres"
     },
     {
-        "ID": 93,
+        "ID": 91,
         "Title": "F5 BIG-IP RCE (CVE-2022-1388)",
         "Description": "Exploit the F5 BIG-IP RCE (CVE-2021-22986)",
         "os_code": "python3 ./exploits/CVE-2022-1388.py -t {RHOST} -c 'cat /etc/os-release && id'"
     },
     {
-        "ID": 94,
+        "ID": 92,
         "Title": "MS08-067:Service Crafted RPC Request Handling Remote Code Execution",
         "Description": "Detect the MS08-067 Vulnerability with nmap",
         "os_code": "nmap -p{RPORT} --script smb-vuln-ms08-067.nse {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 95,
+        "ID": 93,
         "Title": "Cisco IOS IKEv1 Packet Handling Remote Information Disclosure",
         "Description": "Detect the Cisco IOS IKEv1 Packet Handling Remote Information Disclosure with Metasploit Framework",
         "os_code": "msfconsole -q -x 'use auxiliary/scanner/ike/cisco_ike_benigncertain;set rhosts {RHOST};set rport {RPORT};set verbose True;run;exit'"
     },
     {
-        "ID": 96,
+        "ID": 94,
         "Title": "Finger Service Remote Information Disclosure",
         "Description": "Detect the Finger Service Remote Information Disclosure",
         "os_code": "echo 'root' | nc -vn {RHOST} {RPORT} && finger '|/bin/ls -a /@{RHOST}'"
     },
     {
-        "ID": 97,
+        "ID": 95,
         "Title": "MongoDB 3.4.x < 3.4.10 / 3.5.x < 3.6.0-rc0 mongod",
         "Description": "Detect the MongoDB 3.4.x < 3.4.10 / 3.5.x < 3.6.0-rc0 mongod with nmap",
         "os_code": "nmap -p{RPORT} -sV --script mongodb-info {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 98,
+        "ID": 96,
         "Title": "Apache Tomcat Version Based Vulnerabilities (Curl)",
         "Description": "Detect the Apache Tomcat Version with curl",
         "os_code": "echo 'Target Adres: {RHOST}:{RPORT}' && curl 'http://{RHOST}:{RPORT}/non-exit-page' | lynx -dump -stdin | grep -v '^  %\|^    Dload\|^100'"
     },
     {
-        "ID": 99,
+        "ID": 97,
         "Title": "nginx Version Based Vulnerabilities",
         "Description": "Detect the nginx Version with nmap",
         "os_code": "nmap -sV -p{RPORT} {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 100,
+        "ID": 98,
         "Title": "Oracle Database Unsupported Version Detection",
         "Description": "Detect the unsupported Oracle Database Version with nmap",
         "os_code": "nmap -sV -p{RPORT} {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 101,
+        "ID": 99,
         "Title": "TLS Version 1.0 & TLS 1.1 Protocol Detection",
         "Description": "Detect the TLS Version 1.0 & TLS 1.1 Protocol Detection with testssl",
         "os_code": "testssl -p {RHOST}:{RPORT} | grep -v '^ rDNS\|^ Service'"
     },
     {
-        "ID": 102,
+        "ID": 100,
         "Title": "Dropbear SSH Server < 2016.72 Multiple Vulnerabilities",
         "Description": "Detection the Dropbear SSH Server Version with nmap.",
         "os_code": "nmap -p{RPORT} -sV {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
     },
     {
-        "ID": 103,
+        "ID": 101,
         "Title": "Jetty HttpParser Error Remote Memory Disclosure",
         "Description": "Detect the Jetty HttpParser Error Remote Memory Disclosure",
         "os_code": "python3 ./exploits/CVE-2015-2080.py http://{RHOST} {RPORT}"
     },
     {
-        "ID": 104,
+        "ID": 102,
         "Title": "MS09-001: Microsoft Windows SMB Vulnerabilities Remote Code Execution (Python)",
         "Description": "Detect the MS09-001: Microsoft Windows SMB Vulnerabilities Remote Code Execution",
         "os_code": "python3 ./exploits/CVE-2008-4834.py {RHOST}"
     },
     {
-        "ID": 105,
+        "ID": 103,
         "Title": "Unencrypted Telnet Server",
         "Description": "Detection the Unencrypted Telnet Server with nmap.",
         "os_code": "nmap -p{RPORT} --script telnet-encryption {RHOST} | grep -v -e 'Host*' -e 'Service Info*' -e 'closed' -e 'filtered'"
