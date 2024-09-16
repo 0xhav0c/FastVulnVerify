@@ -36,7 +36,7 @@ This tool was developed around two years ago to eliminate the time wasted in the
 FastVulnVerify => use 1
 Selected Module: Nmap Specific Port Scanner
 > Enter IP address or hostname (separated by ' ') => 192.168.0.100 192.168.0.108
-> Enter port(s) (1-65535) or ports separated by ',': => 80,22
+> Enter port(s) (1-65535) or ports separated by ',': => 22,80
 ```
 
 ## Modules List
