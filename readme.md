@@ -28,6 +28,16 @@ This tool was developed around two years ago to eliminate the time wasted in the
 - Module-Based Scanning: The script supports various test modules, allowing you to select and run them for quick and efficient scans.
 - Streamlined Output: Unnecessary outputs are trimmed, making it easier to capture clean screenshots.
 - Over 100 Modules
+- There is support for multiple addresses (IP, domain) and multiple ports.
+  - For example address: 192.168.0.1 192.168.0.2
+  - For example port number: 22,80,443
+
+```bash
+FastVulnVerify => use 1
+Selected Module: Nmap Specific Port Scanner
+> Enter IP address or hostname (separated by ' ') => 192.168.0.100 192.168.0.108
+> Enter port(s) (1-65535) or ports separated by ',': => 80,22
+```
 
 ## Modules List
 
